@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Question</title>
+        {% load static %}
+<link rel="stylesheet" href="{% static 'question/style.css' %}">
+    </head>
+    <body>
+        <h2>Your gender and name</h2>
+        {% if form.errors %}
+        <p style="color:blue;">not correct</p>
+        {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="id_gender">Your gender is:</label>
+        {{ form.gender }}
+        <label for="id_username">Your name is:</label>
+        {{ form.name }}
+        <p>Select you are YES on the next radio buttons</p>
+        {{ form.radio }}
+        <button type="submit">Submit</button>
+    </form>
+    </body>
+</html>

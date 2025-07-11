@@ -1,0 +1,11 @@
+.Judgement ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.Judgement li {
+    margin-bottom: 8px;
+}
+body{
+    text-align: center;
+}

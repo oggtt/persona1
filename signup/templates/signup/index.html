@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sign up</title>
+</head>
+<body>
+    <h2>Sign up</h2>
+    <form method="post">
+        {% csrf_token %}
+        <h2>name is :</h2>
+        {{ form.name }}
+        <h2>email is :</h2>
+        {{ form.email }}
+        <h2>password is :</h2>
+        {{ form.password }}
+        <button type="submit">submit</button>
+    </form>
+    <p><a href="{% url 'Auth' %}">Log in</a></p>
+</body>
+</html>
